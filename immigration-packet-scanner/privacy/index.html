@@ -10,11 +10,12 @@
 <main>
 <nav><a href="/immigration-packet-scanner/privacy/">English</a><a href="/immigration-packet-scanner/privacy/es/">Espa&ntilde;ol</a><a href="/immigration-packet-scanner/support/">Support</a></nav>
 <h1>Privacy Policy: Immigration Packet Scanner</h1>
-<p>Last updated: October 26, 2026</p>
+<p>Last updated: November 15, 2026</p>
 <h2 id="the-short-version">The short version</h2>
 <ul>
 <li>There is no account and no sign-in. Your scans and packet lists stay on your phone.</li>
 <li>The app doesn't upload your documents. They leave your phone only when you export or share them yourself.</li>
+<li>The app reads your scans on your phone to recognise forms, passports, Green Cards and work permits. The page text and the name and dates it recognises stay on your phone; only a form number may be included in analytics.</li>
 <li>Usage data and crash reports are on by default. You can turn them off in Settings &gt; &quot;Share usage data&quot;.</li>
 <li>The free version shows ads from Google AdMob. You choose whether ad partners may use your phone's advertising ID. Premium has no ads.</li>
 <li>Payments go through Apple. We never see your card or Apple ID details.</li>
@@ -22,13 +23,23 @@
 </ul>
 <p>This app is not affiliated with USCIS or any government agency.</p>
 <h2 id="who-we-are">Who we are</h2>
-<p>Immigration Packet Scanner is made by Mark Hanna, an individual developer, shown as the seller on its App Store page. We have no servers and no user accounts. To contact us, write to support@zlothstudio.com.</p>
+<p>Immigration Packet Scanner is made by Zloth Studio LLC, shown as the seller on its App Store page. We have no servers and no user accounts. To contact us, write to support@zlothstudio.com.</p>
 <h2 id="your-documents">Your documents</h2>
-<p>Your scans, page images and packet lists (which form you chose, which heading you picked, and the state of each line) are stored only on your phone. The app doesn't upload them. They are not in analytics, crash reports or ad requests.</p>
+<p>Your scans, page images and packet lists (which form you chose, which heading you picked, and the state of each line) are stored only on your phone, together with the three details the app keeps from a recognised passport, Green Card or work permit (see &quot;Reading your documents on your phone&quot;). The app doesn't upload them. They are not in analytics, crash reports or ad requests.</p>
 <p>On iPhone, iOS file protection covers these files, and they are excluded from iCloud and computer backups. This protection comes from iOS, not from encryption we added.</p>
 <p>The only way a document leaves your phone is when you export or share it yourself through the share sheet. After that, the app or person you choose handles it under their own terms.</p>
 <p>The camera and the photo picker are used only to add pages to a packet.</p>
 <p>You can remove your documents at any time: delete the app, or use &quot;Delete all documents&quot; in Settings.</p>
+<h2 id="reading-your-documents-on-your-phone">Reading your documents on your phone</h2>
+<p>The app reads the text printed on the pages you scan. This happens on your phone. No page, page text or detail read from it is sent to us or to any service, except the form number described under &quot;Usage analytics&quot;. It reads pages to:</p>
+<ul>
+<li>find a form number (I-130, I-485 or I-765) on a form's first page;</li>
+<li>find printed page numbers;</li>
+<li>recognise a passport, Green Card or Employment Authorization Document (EAD, work permit) from the machine-readable lines printed on it, so the app can suggest a packet line where the scan may fit.</li>
+</ul>
+<p>From a recognised passport, Green Card or EAD, the app keeps only three details: the type of document, the holder's name as printed, and the expiry date. They are stored with that scan on your phone, under the same protection as your scans, and are deleted when you delete the scan or use &quot;Delete all documents&quot;. The other details printed in those lines (such as date of birth, nationality and document number) and the rest of the page text are read in memory to recognise the document and are not stored.</p>
+<p>If you haven't named the scan, the app may offer the recognised name as its name (for example &quot;Maria Lopez's Passport&quot;). You can change it. A scan's name can appear in the file names of documents you export or share yourself.</p>
+<p>A suggestion is only a suggestion. The app never adds a scan to a line by itself, and it does not check whether a document is genuine or right for your case. An expired document is shown with its expiry date only.</p>
 <h2 id="usage-analytics">Usage analytics</h2>
 <p>We use PostHog (US cloud) to see how the app is used. It is on by default. You can turn it off in Settings &gt; &quot;Share usage data&quot;.</p>
 <p>What is sent: which screens and actions happen, as fixed event names with fixed values and counts (for example, pages scanned, colour mode, export type, language, whether you allowed ads consent or tracking, whether an ad was shown, and whether you started a trial or bought Premium). Also the app version, the type of device and operating system, your language, and a random identifier created by the app. The identifier is not your name, email, phone number or advertising ID.</p>
@@ -36,9 +47,10 @@
 <p>PostHog receives the IP address of your connection, as any internet service does, and may use it to estimate an approximate location such as your country.</p>
 <p>Analytics events may include which of the app's forms a packet is for (I-130, I-485 or I-765), but never the category or heading inside it. Because a form type can hint at an immigration process, it is sent only with the random app identifier. It is not sent with your name, contact details or advertising ID. Turning off &quot;Share usage data&quot; stops it. It is not sent to ad partners, and we don't use it to infer anything about you.</p>
 <p>When the app shows a note about missing pages or about front and back, it sends only that a note was shown, which kind it was and a count. It never sends the page numbers, the text printed on a page, or the scan. Page numbers are read on your iPhone and stay there.</p>
-<p>The app reads the first page of a scan on your phone to look for a form number (I-130, I-485 or I-765). The page and its text never leave your phone; only the form number may be included in analytics, as described above.</p>
+<p>When the app suggests a scan for a packet line, analytics records only that a suggestion was shown, accepted or dismissed. A suggestion event never includes the type of document, the name, the expiry date, or which line or form the suggestion was for.</p>
+<p>The text the app reads on a page never leaves your phone. Only the form number found on a first page may be included in analytics, as described above.</p>
 <h2 id="crash-reports">Crash reports</h2>
-<p>We use Sentry to find and fix crashes. A report contains error details (what went wrong in the code), the app version, the type of device and operating system, and a random identifier. It doesn't contain screenshots or document content. The same &quot;Share usage data&quot; switch turns crash reports off.</p>
+<p>We use Sentry to find and fix crashes. A report contains error details (what went wrong in the code), the app version, the type of device and operating system, and a random identifier. It doesn't contain screenshots or document content. A report about reading a page or recognising a document never contains page text, a name or an expiry date. The same &quot;Share usage data&quot; switch turns crash reports off.</p>
 <h2 id="ads">Ads</h2>
 <p>Free users see ads from Google AdMob. Premium subscribers see no ads, and the app makes no ad requests for them.</p>
 <p>Before any ad, Google's consent form is shown where Google's consent rules apply (for example in the EEA and UK, and in some US states). On iPhone, Apple's App Tracking Transparency prompt asks whether ad partners may use your device's advertising identifier.</p>
